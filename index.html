@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Live Agent Chat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 40px;
+        }
+
+        .chat-link {
+            padding: 12px 20px;
+            background-color: #0070d2;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .offline-message {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Live Chat Support</h1>
+
+    <!-- Online Chat Button -->
+    <a id="liveagent_button_online_573WI0000006lHB" href="javascript://Chat" style="display: none;"
+        onclick="liveagent.startChat('573WI0000006lHB')"> Chat now </a>
+
+    <!-- Offline Message -->
+    <div id="liveagent_button_online_573WI0000006lHB" class="offline-message" style="display: none;">
+        Live chat is currently unavailable. Please try again later.
+    </div>
+
+    <!-- Salesforce Live Agent Scripts -->
+    <script type='text/javascript'
+        src='https://c.la12s-core1.sfdc-8tgtt5.salesforceliveagent.com/content/g/js/64.0/deployment.js'></script>
+    <script type='text/javascript'>
+        liveagent.init('https://d.la12s-core1.sfdc-8tgtt5.salesforceliveagent.com/chat', '5726g0000005fSP', '00DWI000003gd4r');
+
+
+        // Set up button behavior
+        if (!window._laq) { window._laq = []; }
+        window._laq.push(function () {
+            liveagent.showWhenOnline('573WI0000006lHB', document.getElementById('liveagent_button_online_573WI0000006lHB'));
+            liveagent.showWhenOffline('573WI0000006lHB', document.getElementById('liveagent_button_offline_573WI0000006lHB'));
+        })
+    </script>
+
+</body>
+
+</html>
